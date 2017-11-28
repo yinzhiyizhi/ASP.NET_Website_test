@@ -42,7 +42,7 @@
 
         
 
-        <div id="news_and_video">
+        <div id="news_and_video" class="">
             <div id="div_pushNews">
                 <asp:HyperLink ID="HyperLink1" ImageUrl="~/App_imgs/back_homeNewsTitle.jpg" NavigateUrl="~/news/" ToolTip="更多新闻" runat="server"></asp:HyperLink>
 
