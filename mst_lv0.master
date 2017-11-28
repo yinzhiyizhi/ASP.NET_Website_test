@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mst_lv0.master.cs" Inherits="mst_lv0" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="App_style/CSS_DEFAULT.css" rel="stylesheet" />
+    <script src="../App_script/jquery-3.2.1.js"></script>
+    <script src="../App_script/jquery.validate.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <div>
+            <div id="divmst_topBar">
+                <div class="safeWidth al_r">
+                    <a href="#" id="a_eEnter">电商入口</a>
+                    <a href="#" id="a_setHome">设为首页</a>
+                    <a href="#" id="a_setFav">加入收藏</a>
+                </div>
+            </div>
+
+            <div id="divmst_LogoNav" class="safeWidth">
+                <asp:Image ID="img_logo" runat="server" ImageUrl="~/App_imgs/LOGO.jpg" Width="200" CssClass="fl" />
+                <asp:Menu ID="menu_mainNav" runat="server" CssClass="fr" DataSourceID="SiteMapDataSource1" MaximumDynamicDisplayLevels="0" Orientation="Horizontal" StaticDisplayLevels="2" OnPreRender="menuPreRender"></asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <div class="clr"></div>
+            </div>
+
+            <%--banner大图--%>
+            <div id="divmst_bigimg">
+                <asp:ContentPlaceHolder ID="cph_bigimg" runat="server" />
+            </div>
+
+            <%--标题--%>
+            <div class="safeWidth">
+                <div id="divmst_sitemapPath" runat="server">
+                    您当前的位置是：<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                </div>
+
+                <asp:Label ID="lbl_subpageTitle" runat="server" Text="子页大标题" CssClass="labSubpageTitle" />
+            </div>
+
+            <div id="divmst_content">
+                <asp:ContentPlaceHolder ID="cph_content_temp" runat="server"></asp:ContentPlaceHolder>
+            </div>
+
+            <div id="divmst_submenuList">
+                <div class="safeWidth"></div>
+            </div>
+            <div id="divmst_copyRight">
+                <div class="safeWidth">
+                    页脚copyright
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
