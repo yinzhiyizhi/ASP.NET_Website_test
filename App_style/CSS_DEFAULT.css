@@ -80,6 +80,17 @@
 
 
 
+/*Quick Links*/
+.tbl_quickLinks{width:95%;padding:15px 0px 15px 0px;}
+.tbl_quickLinks td{vertical-align:top;text-align:center;}
+.tbl_quickLinks td+td{border-left:1px dotted #aaa;}
+.tbl_quickLinks ul{ list-style:none;font-size:14px;}
+.tbl_quickLinks li{padding:2px;}
+.tbl_quickLinks a{color:#444;}
+.tbl_quickLinks a:hover{color:black;}
+.tbl_quickLinks .submenuTitle{color:black;font-weight:bold;font-size:14px;line-height:25px;}
+
+
 
 
 

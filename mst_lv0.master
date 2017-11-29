@@ -51,8 +51,14 @@
             </div>
 
             <div id="divmst_submenuList">
-                <div class="safeWidth"></div>
+                <div class="safeWidth" runat="server" id="div_submenus">
+                    <asp:Table runat="server" CssClass="tbl_quickLinks">
+                        <asp:TableRow runat="server" ID="row_links"></asp:TableRow>
+                    </asp:Table>
+                </div>
             </div>
+
+
             <div id="divmst_copyRight">
                 <div class="safeWidth">
                     页脚copyright
