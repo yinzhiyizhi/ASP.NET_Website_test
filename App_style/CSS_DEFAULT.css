@@ -503,7 +503,7 @@ div.divPager {
 }
 
 
-
+/*推送产品*/
 .divPushProds{
     margin:10px 0px;
 }
@@ -530,10 +530,34 @@ div.divPager {
 }
 
 
-.divNews_and_Video{
+
+
+
+/*推送新闻和视频*/
+#news_and_video{
     margin-top:30px;
     margin-bottom:30px;
 }
 
+#div_pushNews{
+    float:left;width:400px;
+}
+#div_pushNews div{
+    margin :10px 10px 10px 0px;
+}
+
+#div_video{
+    float:left;width:360px;
+}
+
+
+.pushnewsItem{
+    display:block;
+    padding:5px;border-bottom:1px dashed #dadada;
+    font-size:12px; color:#555;
+}
+.pushnewsItem:hover p{
+    color:orange;
+}
 
 
