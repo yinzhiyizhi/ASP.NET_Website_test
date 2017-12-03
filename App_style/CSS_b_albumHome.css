@@ -1,0 +1,34 @@
+﻿/*if_uploadTemp.aspx*/
+#fup_1 {
+    display: none;
+}
+
+#btn_upload {
+    display: none;
+}
+
+
+
+/*b_albumHome*/
+#txt_temp {
+    display: none;
+}
+
+#btn_showMpop {
+    display: none;
+}
+
+#div_Mpop {
+    padding: 10px;
+    border: 2px solid silver;
+    background-color: white;
+}
+
+    #div_Mpop .al_c {
+        min-height: 300px;
+    }
+
+.mpopBack {
+    background-color: silver;
+    opacity: 0.3;
+}

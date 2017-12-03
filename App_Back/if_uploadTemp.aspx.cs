@@ -24,6 +24,11 @@ public partial class App_Back_if_uploadTemp : System.Web.UI.Page
             string _targPath = MapPath("~/App_Back/temp" + _ext);
             //保存文件
             _file.SaveAs(_targPath);
+
+            //将文件名作为一个参数
+            string _js="showPopup('temp"+_ext+"')";
+            //构建一个strartupscript
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "", _js, true);
         }
 
     }

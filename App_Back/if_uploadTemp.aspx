@@ -5,16 +5,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script>
+    <link href="../App_style/CSS_b_albumHome.css" rel="stylesheet" />
+    <script src="../App_script/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
         $(document).ready(function () {
             $("#img_upload").click(function(){
                 $("#fup_1").click();
             });
 
-            $("#fup_1").click(function () {
+            $("#fup_1").change(function () {
                 $("#btn_upload").click();
             });
         });
+
+
+        function showPopup(_fname) {
+            var _img = parent.document.getElementById("img_preview");
+            var _txt = parent.document.getElementById("txt_temp");
+            var _btn = parent.document.getElementById("btn_showMpop");
+            $(_txt).val(_fname);
+            $(_img).attr("src", _fname);
+            $(_btn).click();
+        }
     </script>
 </head>
 <body>

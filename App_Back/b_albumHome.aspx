@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../App_style/CSS_DEFAULT.css" rel="stylesheet" />
+    <link href="../App_style/CSS_b_albumHome.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -88,6 +88,11 @@
                 </asp:SqlDataSource>
             </ContentTemplate>
 
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="btn_addNew" />
+            </Triggers>
+
+
         </asp:UpdatePanel>
 
 
@@ -95,13 +100,12 @@
         <asp:TextBox ID="txt_temp" runat="server"></asp:TextBox>
         <asp:Button ID="btn_showMpop" runat="server" Text="显示模式弹出层" />
         <ajaxToolkit:ModalPopupExtender ID="m1" runat="server" PopupControlID="div_Mpop" TargetControlID="btn_showMpop" CancelControlID="btn_cancel" BackgroundCssClass="mpopBack">
-
         </ajaxToolkit:ModalPopupExtender>
 
 
 
         <div id="div_Mpop" runat="server">
-            <div class="al_c" style="min-height:300px;">
+            <div class="al_c" >
                 <img style="max-width:300px;margin:0px auto;" src="" alt="" id="img_preview" runat="server" />
             </div>
             <hr />
@@ -117,7 +121,7 @@
             </p>
 
             <p>
-                <asp:Button ID="btn_addNew" runat="server" Text="添加" />
+                <asp:Button ID="btn_addNew" runat="server" Text="添加" OnClick="btn_addNew_Click" />
 
                 <asp:Button ID="btn_cancel" runat="server" Text="取消" />
             </p>
